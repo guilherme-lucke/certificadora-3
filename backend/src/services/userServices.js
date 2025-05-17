@@ -1,5 +1,4 @@
 import User from "../models/User.js";
-import bcrypt from "bcrypt";
 
 const createUser = async data => {
   try {
@@ -7,13 +6,10 @@ const createUser = async data => {
 
     if (existingUser) {
       const error = new Error("Email already registered");
+      error.statusCode = 400;
 
       throw error;
     }
-
-    const salt = await bcrypt.genSalt(12);
-
-    data.password = await bcrypt.hash(data.password, salt);
 
     const newUser = new User(data);
 
