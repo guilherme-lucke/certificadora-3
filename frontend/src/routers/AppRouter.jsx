@@ -10,13 +10,19 @@ import CadastroPage from "../pages/CadastroPage";
 import PoliticaPrivacidadePage from "../pages/PoliticaPrivacidadePage";
 import ProtectedRoute from "./ProtectedRoute";
 import MinhaAreaLayout from "../layouts/MinhaAreaLayout";
+import MeuPerfilPage from "../pages/profile/MeuPerfilPage";
+import AlterarSenhaPage from "../pages/profile/AlterarSenhaPage";
 import AdminRoute from "./AdminRoute";
 import ListarAtividadesAdminPage from "../pages/admin/activities/ListarAtividadesAdminPage";
 import CriarEditarAtividadePage from "../pages/admin/activities/CriarEditarAtividadePage";
+import MinhasInscricoesPage from "../pages/profile/MinhasInscricoesPage";
+import HistoricoAtividadesPage from "../pages/profile/HistoricoAtividadesPage";
 import ListarEstudantesPage from "../pages/superadmin/users/ListarEstudantesPage";
 import EditarEstudantePage from "../pages/superadmin/users/EditarEstudantePage";
 import ListarAdminsPage from "../pages/superadmin/users/ListarAdminsPage";
 import CriarEditarAdminPage from "../pages/superadmin/users/CriarEditarAdminPage";
+import EsqueciSenhaPage from "../pages/auth/EsqueciSenhaPage";
+import ResetarSenhaPage from "../pages/auth/ResetarSenhaPage";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +33,10 @@ const router = createBrowserRouter([
       { path: "login", element: <LoginPage /> },
       { path: "cadastro", element: <CadastroPage /> },
       { path: "politica-de-privacidade", element: <PoliticaPrivacidadePage /> },
+      { path: "esqueci-senha", element: <EsqueciSenhaPage /> },
+      { path: "reset-password/:token", element: <ResetarSenhaPage /> }, 
 
+      // Rotas protegidas
       {
         element: <ProtectedRoute />, 
         children: [
@@ -36,11 +45,18 @@ const router = createBrowserRouter([
             element: <MinhaAreaLayout />,
             children: [
               { index: true, element: <Navigate to="perfil" replace /> },
+              { path: "perfil", element: <MeuPerfilPage /> },
+              { path: "alterar-senha", element: <AlterarSenhaPage /> },
               {
                 path: "inscricoes",
+                element: <MinhasInscricoesPage />,
               },
               {
-                element: <AdminRoute />, 
+                path: "historico",
+                element: <HistoricoAtividadesPage />,
+              },
+              {
+                element: <AdminRoute />, // Protege adicionalmente para o papel 'admin'
                 children: [
                   {
                     path: "admin/atividades",
@@ -56,7 +72,7 @@ const router = createBrowserRouter([
                   },
                   {
                     path: "superadmin/usuarios/estudantes",
-                    element: <ListarEstudantesPage />,
+                    element: <ListarEstudantesPage />, 
                   },
                   {
                     path: "superadmin/usuarios/estudantes/:userId/editar",
@@ -64,7 +80,7 @@ const router = createBrowserRouter([
                   },
                   {
                     path: "superadmin/usuarios/admins", 
-                    element: <ListarAdminsPage />,
+                    element: <ListarAdminsPage />, 
                   },
                   {
                     path: "superadmin/usuarios/admins/nova",
