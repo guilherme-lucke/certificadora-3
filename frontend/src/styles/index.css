@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  /* Font Families */
+  --font-poppins: "Poppins", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-source-code-pro: "Source Code Pro", monospace;
+
+  /* Brand Colors */
+  /* brandPurple (Baseado em #54318B) */
+  --color-brandPurple-50: #f3efff;
+  --color-brandPurple-100: #e0d8fe;
+  --color-brandPurple-200: #c6b7fd;
+  --color-brandPurple-300: #a890fc;
+  --color-brandPurple-400: #8a69fa;
+  --color-brandPurple-500: #6f42f8;
+  --color-brandPurple-600: #5d31d7;
+  --color-brandPurple-700: #54318b; /* DEFAULT */
+  --color-brandPurple-800: #42266d;
+  --color-brandPurple-900: #311c51;
+  --color-brandPurple-950: #20123a;
+
+  /* brandPink (Baseado em #9B388C) */
+  --color-brandPink-50: #fef0f9;
+  --color-brandPink-100: #fce0f3;
+  --color-brandPink-200: #fac0e9;
+  --color-brandPink-300: #f7a0de;
+  --color-brandPink-400: #f280d3;
+  --color-brandPink-500: #da58b9;
+  --color-brandPink-600: #9b388c; /* DEFAULT */
+  --color-brandPink-700: #7e2d71;
+  --color-brandPink-800: #612257;
+  --color-brandPink-900: #4a1a42;
+  --color-brandPink-950: #32112d;
+
+  /* brandOrange (Baseado em #EE9F1C) */
+  --color-brandOrange-50: #fff9e8;
+  --color-brandOrange-100: #fff2d0;
+  --color-brandOrange-200: #ffe5a2;
+  --color-brandOrange-300: #ffd873;
+  --color-brandOrange-400: #ffc03f;
+  --color-brandOrange-500: #ee9f1c; /* DEFAULT */
+  --color-brandOrange-600: #d68913;
+  --color-brandOrange-700: #b06d0e;
+  --color-brandOrange-800: #8a550a;
+  --color-brandOrange-900: #6e4308;
+  --color-brandOrange-950: #4c2e05;
+
+  /* Semantic Colors */
+  --color-primary: var(--color-brandPurple-700);
+  --color-primary-light: var(--color-brandPurple-500);
+  --color-primary-dark: var(--color-brandPurple-900);
+  --color-primary-foreground: var(
+    --color-white
+  ); /* Assuming white is default or defined */
+
+  --color-secondary: var(--color-brandPink-600);
+  --color-secondary-light: var(--color-brandPink-400);
+  --color-secondary-dark: var(--color-brandPink-800);
+  --color-secondary-foreground: var(--color-white);
+
+  --color-accent: var(--color-brandOrange-500);
+  --color-accent-light: var(--color-brandOrange-300);
+  --color-accent-dark: var(--color-brandOrange-700);
+  --color-accent-foreground: var(--color-brandOrange-950);
+
+  /* Text Colors (using Tailwind's default gray for now, can be customized) */
+  /* For these to work as text-text-default, they need to be in --color-text-* namespace */
+  /* Or, you'd use them as text-gray-800 etc. */
+  /* For simplicity, defining them directly if you want to use text-text-default */
+  --color-text-default: var(
+    --color-gray-800
+  ); /* Uses Tailwind's default gray */
+  --color-text-muted: var(--color-gray-500); /* Uses Tailwind's default gray */
+  --color-text-inverted: var(--color-white);
+
+  /* Background Colors */
+  --color-bg-default: var(--color-white);
+  --color-bg-surface: var(--color-gray-100); /* Uses Tailwind's default gray */
+
+  /* Feedback Colors (using common hex codes for Tailwind's default shades) */
+  /* These are examples; actual hex values from Tailwind's palette might be preferable */
+  --color-success: #16a34a; /* Typically green-600 */
+  --color-warning: #f59e0b; /* Typically yellow-500 / amber-500 */
+  --color-error: #dc2626; /* Typically red-600 */
+  --color-info: #3b82f6; /* Typically blue-500 */
+
+  --color-gradient-start: var(--color-brandPurple-700);
+  --color-gradient-middle: var(--color-brandPink-600);
+  --color-gradient-end: var(--color-brandOrange-500);
+}
+
+body {
+  font-family: var(--font-open-sans);
+  color: var(
+    --color-text-default
+  ); 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins);
+}
