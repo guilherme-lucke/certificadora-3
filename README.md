@@ -4,10 +4,10 @@
 
 ### Alunos Participantes do Desenvolvimento:
 
-*   Guilherme Grilo Luche (Líder e Frontend Developer)
-*   Bernardo Seabra (Frontend Developer)
-*   Gustavo Luiz Conceição Zago (Frontend Developer)
-*   Fernando Santos Nascimento (Backend Developer)
+- Guilherme Grilo Luche (Líder e Frontend Developer)
+- Bernardo Seabra (Frontend Developer)
+- Gustavo Luiz Conceição Zago (Frontend Developer)
+- Fernando Santos Nascimento (Backend Developer)
 
 ---
 
@@ -22,24 +22,24 @@ O sistema de gerenciamento de inscrições para o projeto Meninas Digitais UTFPR
 O sistema implementa as seguintes funcionalidades principais:
 
 1.  **Autenticação e Gerenciamento de Contas de Usuário:**
-    *   Cadastro de Estudantes (com consentimento LGPD).
-    *   Login/Logout para todos os papéis (Estudante, Admin, SuperAdmin).
-    *   Recuperação de Senha ("Esqueci Minha Senha" via e-mail, testável com Mailtrap).
-    *   Gerenciamento de Perfil (Estudante): Visualização/edição de dados, alteração de senha.
+    - Cadastro de Estudantes (com consentimento LGPD).
+    - Login/Logout para todos os papéis (Estudante, Admin, SuperAdmin).
+    - Recuperação de Senha ("Esqueci Minha Senha" via e-mail, testável com Mailtrap).
+    - Gerenciamento de Perfil (Estudante): Visualização/edição de dados, alteração de senha.
 2.  **Gerenciamento de Atividades:**
-    *   Visualização Pública de atividades publicadas.
-    *   Criação, Listagem, Edição e Exclusão de Atividades (Admin/SuperAdmin).
-    *   Gerenciamento de Status de Atividades (Admin/SuperAdmin).
+    - Visualização Pública de atividades publicadas.
+    - Criação, Listagem, Edição e Exclusão de Atividades (Admin/SuperAdmin).
+    - Gerenciamento de Status de Atividades (Admin/SuperAdmin).
 3.  **Sistema de Inscrição em Atividades:**
-    *   Inscrição por Estudantes em atividades disponíveis (com validação de vagas).
-    *   Gerenciamento de Inscrições (Estudante): Visualização e cancelamento de inscrições.
-    *   Visualização de Inscritos por Atividade (Admin/SuperAdmin).
-    *   Histórico de Participação (Estudante).
+    - Inscrição por Estudantes em atividades disponíveis (com validação de vagas).
+    - Gerenciamento de Inscrições (Estudante): Visualização e cancelamento de inscrições.
+    - Visualização de Inscritos por Atividade (Admin/SuperAdmin).
+    - Histórico de Participação (Estudante).
 4.  **Gerenciamento de Papéis e Permissões (RBAC):**
-    *   Diferenciação de acesso e funcionalidades para os papéis Estudante, Admin e SuperAdmin.
-    *   SuperAdmin: Gerenciamento completo de contas de Estudantes e Admins (criar Admins, ativar/desativar contas, etc.).
+    - Diferenciação de acesso e funcionalidades para os papéis Estudante, Admin e SuperAdmin.
+    - SuperAdmin: Gerenciamento completo de contas de Estudantes e Admins (criar Admins, ativar/desativar contas, etc.).
 5.  **Conformidade com LGPD (Básico):**
-    *   Política de Privacidade, coleta de consentimento, solicitação de exclusão de conta por estudante.
+    - Política de Privacidade, coleta de consentimento, solicitação de exclusão de conta por estudante.
 
 ---
 
@@ -47,50 +47,51 @@ O sistema implementa as seguintes funcionalidades principais:
 
 ### 4.1. Codificação, Compilação e Execução:
 
-*   **Linguagem Principal (Backend):** JavaScript (Node.js)
-    *   **Versão Node.js:** LTS (ex: v18.x.x ou v20.x.x). [Link: Node.js](https://nodejs.org/)
-*   **Framework Backend:** Express.js
-    *   **Versão:** ^4.18.x (Recomendado) ou ^5.x.x (Beta - conforme `package.json`). [Link: Express.js](https://expressjs.com/)
-*   **Linguagem Principal (Frontend):** JavaScript (React)
-    *   **Framework Frontend:** React.js
-        *   **Versão:** ^18.x.x ou ^19.x.x (conforme `package.json`). [Link: React.js](https://reactjs.org/)
-    *   **Build Tool (Frontend):** Vite
-        *   **Versão:** ^5.x.x ou ^6.x.x (conforme `package.json`). [Link: Vite](https://vitejs.dev/)
-*   **Ambiente de Desenvolvimento Integrado (IDE):** Visual Studio Code (VS Code)
-    *   **Versão:** Mais recente. [Link: VS Code](https://code.visualstudio.com/)
-*   **Controle de Versão:** Git
-    *   **Versão:** Mais recente. [Link: Git](https://git-scm.com/)
+- **Linguagem Principal (Backend):** JavaScript (Node.js)
+  - **Versão Node.js:** LTS (ex: v18.x.x ou v20.x.x). [Link: Node.js](https://nodejs.org/)
+- **Framework Backend:** Express.js
+  - **Versão:** ^4.18.x (Recomendado) ou ^5.x.x (Beta - conforme `package.json`). [Link: Express.js](https://expressjs.com/)
+- **Linguagem Principal (Frontend):** JavaScript (React)
+  - **Framework Frontend:** React.js
+    - **Versão:** ^18.x.x ou ^19.x.x (conforme `package.json`). [Link: React.js](https://reactjs.org/)
+  - **Build Tool (Frontend):** Vite
+    - **Versão:** ^5.x.x ou ^6.x.x (conforme `package.json`). [Link: Vite](https://vitejs.dev/)
+- **Ambiente de Desenvolvimento Integrado (IDE):** Visual Studio Code (VS Code)
+  - **Versão:** Mais recente. [Link: VS Code](https://code.visualstudio.com/)
+- **Controle de Versão:** Git
+  - **Versão:** Mais recente. [Link: Git](https://git-scm.com/)
 
 ### 4.2. Base de Dados:
 
-*   **Sistema de Gerenciamento de Banco de Dados (SGBD):** MongoDB (NoSQL)
-    *   **Hospedagem/Serviço:** MongoDB Atlas (Cloud Service). [Link: MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-    *   **ODM (Node.js):** Mongoose
-        *   **Versão:** ^8.x.x (conforme `package.json`). [Link: Mongoose](https://mongoosejs.com/)
+- **Sistema de Gerenciamento de Banco de Dados (SGBD):** MongoDB (NoSQL)
+  - **Hospedagem/Serviço:** MongoDB Atlas (Cloud Service). [Link: MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+  - **ODM (Node.js):** Mongoose
+    - **Versão:** ^8.x.x (conforme `package.json`). [Link: Mongoose](https://mongoosejs.com/)
 
 ### 4.3. Bibliotecas e Ferramentas Complementares (Principais):
-* **Backend:** 
-	* `dotenv`: Gerenciamento de variáveis de ambiente.
-	* `jsonwebtoken`: Geração e verificação de tokens JWT.
-	* `bcryptjs`: Hashing de senhas (verifique a versão no seu `package.json`, ex: `^2.4.3`).
-	* `cors`: Habilitação de Cross-Origin Resource Sharing. 
-	* `express-validator`: Validação de requests. 
-	* `nodemailer`: Envio de e-mails (para "Esqueci Senha"). 
-	* `nodemon` (Desenvolvimento): Reinício automático do servidor.
-* **Frontend:**
-	* `react-router-dom`: Roteamento no cliente.
-	* `axios`: Requisições HTTP.
-	* `tailwindcss`: Estilização CSS utility-first.
-	* `react-icons`: Ícones.
-* **Teste de E-mail (Desenvolvimento):** 
-	* **Ferramenta:** Mailtrap.io (ou similar)
-		* **Versão:** N/A (Serviço Web). [Link: Mailtrap.io](https://mailtrap.io/)
+
+- **Backend:**
+  - `dotenv`: Gerenciamento de variáveis de ambiente.
+  - `jsonwebtoken`: Geração e verificação de tokens JWT.
+  - `bcryptjs`: Hashing de senhas (verifique a versão no seu `package.json`, ex: `^2.4.3`).
+  - `cors`: Habilitação de Cross-Origin Resource Sharing.
+  - `express-validator`: Validação de requests.
+  - `nodemailer`: Envio de e-mails (para "Esqueci Senha").
+  - `nodemon` (Desenvolvimento): Reinício automático do servidor.
+- **Frontend:**
+  - `react-router-dom`: Roteamento no cliente.
+  - `axios`: Requisições HTTP.
+  - `tailwindcss`: Estilização CSS utility-first.
+  - `react-icons`: Ícones.
+- **Teste de E-mail (Desenvolvimento):**
+  - **Ferramenta:** Mailtrap.io (ou similar)
+    - **Versão:** N/A (Serviço Web). [Link: Mailtrap.io](https://mailtrap.io/)
 
 ---
 
 ## 5. Roteiro para Configurar e Executar o Sistema
 
-_**Link para o Vídeo de Instalação e Execução:** [COLOQUE_AQUI_O_LINK_PARA_O_VÍDEO_NO_YOUTUBE_OU_SIMILAR]
+\_**Link para o Vídeo de Instalação e Execução:** [COLOQUE_AQUI_O_LINK_PARA_O_VÍDEO_NO_YOUTUBE_OU_SIMILAR]
 
 ### 5.1. Pré-requisitos de Instalação:
 
@@ -104,10 +105,10 @@ _**Link para o Vídeo de Instalação e Execução:** [COLOQUE_AQUI_O_LINK_PARA_
 2.  **Crie um Usuário de Banco de Dados:** Em "Database Access", crie um novo usuário (ex: `user_meninas`) com uma senha forte. Anote as credenciais.
 3.  **Permita Acesso de Rede:** Em "Network Access", clique em "ADD IP ADDRESS" e depois em "ALLOW ACCESS FROM ANYWHERE" (ou adicione seu IP específico). Confirme.
 4.  **Obtenha a String de Conexão:**
-    *   No seu cluster, clique em "Connect" -> "Drivers".
-    *   Copie a string de conexão. Exemplo: `mongodb+srv://<username>:<password>@clustername.mongodb.net/<dbname>?retryWrites=true&w=majority`.
-    *   Substitua `<username>` pelo usuário criado (ex: `user_meninas`), `<password>` pela senha dele, e defina um `<dbname>` (ex: `meninas_digitais_db`).
-    *   **Guarde esta string completa.**
+    - No seu cluster, clique em "Connect" -> "Drivers".
+    - Copie a string de conexão. Exemplo: `mongodb+srv://<username>:<password>@clustername.mongodb.net/<dbname>?retryWrites=true&w=majority`.
+    - Substitua `<username>` pelo usuário criado (ex: `user_meninas`), `<password>` pela senha dele, e defina um `<dbname>` (ex: `meninas_digitais_db`).
+    - **Guarde esta string completa.**
 
 ### 5.3. Configuração do Backend:
 
@@ -121,27 +122,31 @@ _**Link para o Vídeo de Instalação e Execução:** [COLOQUE_AQUI_O_LINK_PARA_
     npm install
     ```
 3.  **Crie o Arquivo de Variáveis de Ambiente (`.env`):**
-    *   Na pasta `backend/`, crie um arquivo chamado `.env`.
-    *   Adicione o seguinte conteúdo, **substituindo pelos seus valores**:
-        ```env
-        NODE_ENV=development
-        PORT=5000
-        MONGO_URI=SUA_STRING_DE_CONEXAO_COMPLETA_DO_MONGODB_ATLAS
-        JWT_SECRET=definaUmSegredoForteParaSeusTokensJWT
-        JWT_EXPIRES_IN=1d
 
-        # Credenciais do Mailtrap (obtenha da sua inbox no Mailtrap.io -> SMTP Settings -> Integrations -> Nodemailer)
-        EMAIL_HOST=smtp.mailtrap.io
-        EMAIL_PORT=2525 # Ou a porta indicada pelo Mailtrap
-        EMAIL_USER=SEU_USERNAME_MAILTRAP
-        EMAIL_PASS=SUA_PASSWORD_MAILTRAP
-        EMAIL_FROM="Meninas Digitais App <noreply@example.com>"
-        ```
-4.  **(Recomendado) Execute o Script de Seed para Popular o Banco:**
+    - Na pasta `backend/`, crie um arquivo chamado `.env`.
+    - Adicione o seguinte conteúdo, **substituindo pelos seus valores**:
+
+      ```env
+      NODE_ENV=development
+      PORT=5000
+      MONGO_URI=SUA_STRING_DE_CONEXAO_COMPLETA_DO_MONGODB_ATLAS
+      JWT_SECRET=definaUmSegredoForteParaSeusTokensJWT
+      JWT_EXPIRES_IN=1d
+
+      # Credenciais do Mailtrap (obtenha da sua inbox no Mailtrap.io -> SMTP Settings -> Integrations -> Nodemailer)
+      EMAIL_HOST=smtp.mailtrap.io
+      EMAIL_PORT=2525 # Ou a porta indicada pelo Mailtrap
+      EMAIL_USER=SEU_USERNAME_MAILTRAP
+      EMAIL_PASS=SUA_PASSWORD_MAILTRAP
+      EMAIL_FROM="Meninas Digitais App <noreply@example.com>"
+      ```
+
+4.  **(Recomendado) Execute os Scripts de Seed para Popular o Banco:**
+    - Execute os seguintes comandos **na ordem especificada** para popular o banco com dados iniciais. Isso criará contas de usuário padrão, atividades de exemplo e inscrições.
     ```bash
     npm run seed:users
-    # Para popular com mais dados (atividades, etc., se os scripts existirem):
-    # npm run seed:all
+    npm run seed:activities
+    npm run seed:inscriptions
     ```
 5.  **Inicie o Servidor Backend:**
     ```bash
@@ -154,7 +159,7 @@ _**Link para o Vídeo de Instalação e Execução:** [COLOQUE_AQUI_O_LINK_PARA_
 1.  **Abra um NOVO terminal.**
 2.  **Navegue até a Pasta do Frontend:**
     ```bash
-    cd certificadora-3/frontend 
+    cd certificadora-3/frontend
     # Se estiver na raiz do projeto 'certificadora-3'
     ```
 3.  **Instale as Dependências:**
@@ -162,11 +167,11 @@ _**Link para o Vídeo de Instalação e Execução:** [COLOQUE_AQUI_O_LINK_PARA_
     npm install
     ```
 4.  **(Opcional, mas recomendado) Crie o Arquivo de Variáveis de Ambiente (`.env.local`):**
-    *   Na pasta `frontend/`, crie um arquivo chamado `.env.local`.
-    *   Adicione a URL base da API do backend:
-        ```env
-        VITE_API_BASE_URL=http://localhost:5000/api/v1 # Use a porta correta do seu backend
-        ```
+    - Na pasta `frontend/`, crie um arquivo chamado `.env.local`.
+    - Adicione a URL base da API do backend:
+      ```env
+      VITE_API_BASE_URL=http://localhost:5000/api/v1 # Use a porta correta do seu backend
+      ```
 5.  **Inicie a Aplicação Frontend:**
     ```bash
     npm run dev
@@ -179,17 +184,17 @@ _**Link para o Vídeo de Instalação e Execução:** [COLOQUE_AQUI_O_LINK_PARA_
 
 **Contas de Acesso Padrão (se o script `seed:users` foi executado):**
 
-*   **SuperAdmin:**
-    *   E-mail: `superadmin@meninasdigitais.com`
-    *   Senha: `SuperAdmin123!`
-*   **Admin:**
-    *   E-mail: `admin@meninasdigitais.com`
-    *   Senha: `Admin123!`
-*   **Estudante:**
-    *   E-mail: `estudante@email.com`
-    *   Senha: `Estudante123!`
+- **SuperAdmin:**
+  - E-mail: `superadmin@meninasdigitais.com`
+  - Senha: `SuperAdmin123!`
+- **Admin:**
+  - E-mail: `admin@meninasdigitais.com`
+  - Senha: `Admin123!`
+- **Estudante:**
+  - E-mail: `estudante@email.com`
+  - Senha: `Estudante123!`
 
-*(Se o seed não foi executado, cadastre-se como estudante. Para papéis de Admin/SuperAdmin, o campo `role` do usuário precisará ser alterado manualmente no MongoDB Atlas após o cadastro inicial).*
+_(Se o seed não foi executado, cadastre-se como estudante. Para papéis de Admin/SuperAdmin, o campo `role` do usuário precisará ser alterado manualmente no MongoDB Atlas após o cadastro inicial)._
 
 **Fluxos de Teste Sugeridos:**
 
