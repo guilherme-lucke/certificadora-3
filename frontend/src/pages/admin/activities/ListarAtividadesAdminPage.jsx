@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import adminActivityService from "../../../services/adminActivityService";
 import Modal from "../../../components/common/Modal"; // Modal de confirmação de exclusão
@@ -32,11 +32,6 @@ const ListarAtividadesAdminPage = () => {
   const fetchActivities = useCallback(async () => {
     setIsLoading(true);
     setError(null);
-    // Limpar actionError e successMessage aqui pode ser muito agressivo se eles
-    // forem de uma ação anterior que o usuário ainda não viu.
-    // Considere limpar apenas quando uma nova ação é iniciada.
-    // setActionError("");
-    // setSuccessMessage("");
     try {
       const params = {
         page: currentPage,
@@ -245,7 +240,7 @@ const ListarAtividadesAdminPage = () => {
                             ? "bg-orange-100 text-orange-800"
                             : activity.status === "Cancelada"
                             ? "bg-red-100 text-red-800"
-                            : "bg-gray-100 text-gray-800" // Para Em Andamento, Realizada, Inscrições Encerradas
+                            : "bg-gray-100 text-gray-800"
                         }`}
                       >
                         {activity.status}
@@ -291,8 +286,6 @@ const ListarAtividadesAdminPage = () => {
           {/* Controles de Paginação */}
           {totalPages > 1 && (
             <div className="mt-6 flex items-center space-x-2">
-              {" "}
-              {/* Alterado aqui: justify-start implícito e space-x-2 para espaçamento interno */}
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import superAdminUserService from "../../../services/superAdminUserService";
 import Input from "../../../components/common/Input"; // Reutilizar
@@ -19,7 +19,6 @@ const EditarEstudantePage = () => {
   const [formErrors, setFormErrors] = useState({});
   const [apiError, setApiError] = useState("");
 
-  // TODO: useEffect para buscar dados do estudante
   useEffect(() => {
     if (userId) {
       const fetchStudent = async () => {
@@ -47,7 +46,6 @@ const EditarEstudantePage = () => {
       fetchStudent();
     }
   }, [userId]);
-  // TODO: handleChange
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setStudentData((prev) => ({
@@ -56,12 +54,10 @@ const EditarEstudantePage = () => {
     }));
     if (formErrors[name]) setFormErrors((prev) => ({ ...prev, [name]: "" }));
   };
-  // TODO: handleSubmit
   const validateForm = () => {
     const errors = {};
     if (!studentData.nomeCompleto.trim())
       errors.nomeCompleto = "Nome completo é obrigatório.";
-    // Adicionar mais validações conforme necessário
     return errors;
   };
 
@@ -90,7 +86,6 @@ const EditarEstudantePage = () => {
         dataToUpdate
       );
       if (response.success) {
-        // toast.success("Dados do estudante atualizados com sucesso!");
         alert("Dados do estudante atualizados com sucesso!");
         navigate("/minha-area/superadmin/usuarios/estudantes");
       } else {
@@ -102,7 +97,6 @@ const EditarEstudantePage = () => {
       setIsLoading(false);
     }
   };
-  // TODO: JSX do formulário
 
   if (isLoading) return <p>Carregando dados do estudante...</p>;
   if (apiError && !studentData.nomeCompleto)

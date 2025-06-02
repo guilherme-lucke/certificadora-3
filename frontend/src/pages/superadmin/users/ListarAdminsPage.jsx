@@ -114,11 +114,6 @@ const ListarAdminsPage = () => {
         // Refetch admins para atualizar a lista e a paginação na página atual
         fetchAdmins();
       }
-      // Não é mais necessário atualizar o estado local 'admins' manualmente aqui,
-      // pois fetchAdmins cuidará disso.
-      // setAdmins((prevAdmins) =>
-      //   prevAdmins.filter((a) => a._id !== adminToDelete._id)
-      // );
       setIsDeleteModalOpen(false);
       setAdminToDelete(null);
     } catch (err) {
@@ -127,8 +122,6 @@ const ListarAdminsPage = () => {
       setIsDeleting(false);
     }
   };
-
-  // TODO: JSX da tabela
 
   if (isLoading) return <p>Carregando administradores...</p>;
   if (error) return <p className="text-red-500">Erro: {error}</p>;
@@ -303,9 +296,9 @@ const ListarAdminsPage = () => {
         title="Confirmar Remoção de Administrador"
         onConfirm={handleConfirmDeleteAdmin}
         confirmText="Sim, Remover"
-        confirmingText="Removendo..." // Adicionado
+        confirmingText="Removendo..."
         isConfirming={isDeleting}
-        confirmButtonVariant="danger" // Explícito, embora seja o padrão
+        confirmButtonVariant="danger"
       >
         <p>
           Tem certeza que deseja remover o administrador{" "}
@@ -325,9 +318,9 @@ const ListarAdminsPage = () => {
         } de Administrador`}
         onConfirm={handleConfirmToggleAdminStatus}
         confirmText={`Sim, ${newStatusForAdmin ? "Ativar" : "Desativar"}`}
-        confirmingText="Atualizando..." // Adicionado
+        confirmingText="Atualizando..."
         isConfirming={isTogglingStatus}
-        confirmButtonVariant={newStatusForAdmin ? "success" : "warning"} // Dinâmico
+        confirmButtonVariant={newStatusForAdmin ? "success" : "warning"}
       >
         <p>
           Tem certeza que deseja {newStatusForAdmin ? "ativar" : "desativar"} o

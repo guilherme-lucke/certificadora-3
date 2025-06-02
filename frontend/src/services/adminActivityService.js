@@ -76,7 +76,6 @@ const deleteActivity = async (activityId) => {
     const response = await apiClient.delete(`/admin/activities/${activityId}`);
     // Contrato da API: { success: true, message } ou 204 No Content
     // Se for 204, response.data pode ser undefined/vazio.
-    // Vamos padronizar retornando a resposta ou um objeto de sucesso se for 204.
     if (response.status === 204) {
       return { success: true, message: "Atividade excluída com sucesso!" };
     }

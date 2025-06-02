@@ -1,5 +1,3 @@
-import React from "react";
-
 const EnrolledStudentsModal = ({
   isOpen,
   onClose,
@@ -33,7 +31,7 @@ const EnrolledStudentsModal = ({
             className="text-gray-500 hover:text-gray-700 text-2xl"
             aria-label="Fechar modal"
           >
-            &times; {/* Caractere 'X' */}
+            &times;
           </button>
         </div>
 

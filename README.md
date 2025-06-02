@@ -91,7 +91,7 @@ O sistema implementa as seguintes funcionalidades principais:
 
 ## 5. Roteiro para Configurar e Executar o Sistema
 
-\_**Link para o Vídeo de Instalação e Execução:** [COLOQUE_AQUI_O_LINK_PARA_O_VÍDEO_NO_YOUTUBE_OU_SIMILAR]
+\_**Link para o Vídeo de Instalação e Execução:** [Vídeo](https://drive.google.com/file/d/1J6J_trgN4y7jWZqT33oW51OXKtZVPrWp/view?usp=drive_link)
 
 ### 5.1. Pré-requisitos de Instalação:
 

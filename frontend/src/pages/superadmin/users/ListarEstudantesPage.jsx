@@ -112,11 +112,6 @@ const ListarEstudantesPage = () => {
         // Refetch students para atualizar a lista e a paginação na página atual
         fetchStudents();
       }
-      // Não é mais necessário atualizar o estado local 'students' manualmente aqui,
-      // pois fetchStudents cuidará disso.
-      // setStudents((prevStudents) =>
-      //   prevStudents.filter((s) => s._id !== studentToDelete._id)
-      // );
       setIsDeleteModalOpen(false);
       setStudentToDelete(null);
     } catch (err) {
@@ -125,8 +120,6 @@ const ListarEstudantesPage = () => {
       setIsDeleting(false);
     }
   };
-
-  // TODO: JSX da tabela
 
   if (isLoading) return <p>Carregando estudantes...</p>;
   if (error) return <p className="text-red-500">Erro: {error}</p>;
@@ -312,8 +305,6 @@ const ListarEstudantesPage = () => {
         confirmButtonVariant={newStatusForToggle ? "success" : "warning"}
       >
         <p className="mb-4">
-          {" "}
-          {/* Removido p-6 e mb-4 daqui para o conteúdo direto */}
           Tem certeza que deseja {newStatusForToggle ? "ativar" : "desativar"} o
           estudante{" "}
           <strong>

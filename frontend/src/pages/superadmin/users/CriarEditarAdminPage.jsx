@@ -24,21 +24,13 @@ const CriarEditarAdminPage = () => {
     ? "Editar Administrador"
     : "Criar Novo Administrador";
 
-  // TODO: useEffect (para buscar dados se isEditing)
-  // Dentro de CriarEditarAdminPage.jsx
   useEffect(() => {
     if (isEditing && userId) {
       const fetchAdminData = async () => {
         setIsLoading(true);
         setApiError("");
         try {
-          // Assumindo que getAdmins() retorna todos os campos necessários, ou crie getAdminById()
-          // Para simplicidade, vamos assumir que o GET /superadmin/users/admins já traz o suficiente
-          // ou que você implementará getAdminById no serviço.
-          // Se não tiver getAdminById, você pode filtrar da lista de admins (menos ideal)
-          // ou o backend PUT /superadmin/users/admins/:userId deve retornar o objeto completo.
-          // Vamos simular a busca por ID, mesmo que a API não liste explicitamente GET /admins/:id
-          const data = await superAdminUserService.getAdminById(userId); // CRIE ESTA FUNÇÃO NO SERVIÇO
+          const data = await superAdminUserService.getAdminById(userId);
           setFormData({
             nomeCompleto: data.nomeCompleto || "",
             email: data.email || "", // Exibir, mas não permitir edição se não for suportado pela API
@@ -66,7 +58,7 @@ const CriarEditarAdminPage = () => {
       });
       setIsLoading(false);
     }
-  }, [isEditing, userId]); // TODO: handleChange
+  }, [isEditing, userId]);
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -76,9 +68,6 @@ const CriarEditarAdminPage = () => {
     if (formErrors[name]) setFormErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
-  // TODO: handleSubmit
-
-  // Dentro de CriarEditarAdminPage.jsx
   const validateForm = () => {
     const errors = {};
     if (!formData.nomeCompleto.trim())
@@ -136,11 +125,9 @@ const CriarEditarAdminPage = () => {
       setIsLoading(false);
     }
   };
-  // TODO: JSX do formulário
 
   if (isLoading && isEditing)
     return <p>Carregando dados do administrador...</p>;
-  // ...
   return (
     <div>
       <h1 className="text-2xl font-semibold text-gray-800 mb-6 border-b pb-4">

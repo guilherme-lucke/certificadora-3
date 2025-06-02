@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import adminActivityService from "../../../services/adminActivityService"; // Ajuste o caminho
 import Input from "../../../components/common/Input"; // Reutilizar
-// import Textarea from "../../../components/common/Textarea"; // Se criar um
-// import Select from "../../../components/common/Select"; // Se criar um
 
 const TIPOS_ATIVIDADE = [
   { value: "Oficina", label: "Oficina" },
@@ -124,7 +122,6 @@ const CriarEditarAtividadePage = () => {
     e.preventDefault();
     setApiError("");
 
-    // Exemplo de validação simples a ser adicionada no handleSubmit
     const validateForm = () => {
       const errors = {};
       if (!formData.nome.trim())
@@ -136,8 +133,6 @@ const CriarEditarAtividadePage = () => {
         errors.dataHoraInicio = "Data de início é obrigatória.";
       if (formData.vagasTotal === "" || parseInt(formData.vagasTotal, 10) < 0)
         errors.vagasTotal = "Número de vagas inválido ou obrigatório.";
-      // Adicione mais validações para os outros campos (local, datas de inscrição, etc.)
-      // Validar se data Fim Inscrição > data Inicio Inscrição, etc.
       return errors;
     };
 
@@ -150,13 +145,6 @@ const CriarEditarAtividadePage = () => {
 
     setIsLoading(true);
     try {
-      // O backend espera datas no formato ISO.
-      // Se os inputs datetime-local já estão retornando o formato correto, ótimo.
-      // Caso contrário, pode ser necessário converter formData.dataHoraInicio, etc., para ISO string.
-      // No entanto, inputs type="datetime-local" geralmente fornecem uma string que
-      // pode ser diretamente usada ou facilmente convertida para Date() e depois .toISOString().
-      // O backend deverá ser capaz de parsear YYYY-MM-DDTHH:mm.
-
       let response;
       if (isEditing) {
         response = await adminActivityService.updateActivity(
@@ -186,8 +174,6 @@ const CriarEditarAtividadePage = () => {
       setIsLoading(false);
     }
   };
-
-  // TODO: Validações de formulário
 
   const pageTitle = isEditing ? "Editar Atividade" : "Criar Nova Atividade";
 
@@ -412,7 +398,6 @@ const CriarEditarAtividadePage = () => {
           </button>
         </div>
       </form>
-      {/* A seção de estudantes inscritos foi removida daqui e será implementada em um modal na página de listagem */}
     </div>
   );
 };
