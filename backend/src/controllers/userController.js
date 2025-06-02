@@ -1,7 +1,6 @@
-// backend/src/controllers/userController.js
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
-const Inscription = require("../models/Inscription"); // <<< ADICIONAR IMPORT
+const Inscription = require("../models/Inscription");
 const mongoose = require("mongoose");
 
 // @desc    Obter perfil do usuário logado

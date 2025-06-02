@@ -1,4 +1,3 @@
-// frontend/src/pages/superadmin/users/CriarEditarAdminPage.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import superAdminUserService from "../../../services/superAdminUserService";

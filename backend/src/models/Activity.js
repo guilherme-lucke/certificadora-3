@@ -1,5 +1,3 @@
-// backend/src/models/Activity.js
-
 const mongoose = require("mongoose");
 
 const ActivitySchema = new mongoose.Schema(

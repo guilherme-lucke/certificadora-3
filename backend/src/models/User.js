@@ -1,5 +1,3 @@
-// backend/src/models/User.js
-
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs"); // Vamos precisar para o pre-save hook de senha
 

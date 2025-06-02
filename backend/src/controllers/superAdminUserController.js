@@ -1,4 +1,3 @@
-// backend/src/controllers/superAdminUserController.js
 const User = require("../models/User");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");

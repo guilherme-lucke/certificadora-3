@@ -1,4 +1,3 @@
-// backend/src/routes/activityAdminRoutes.js (Exemplo de como será usado)
 const express = require("express");
 const router = express.Router();
 const activityAdminController = require("../controllers/activityAdminController");

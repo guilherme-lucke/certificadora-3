@@ -1,4 +1,3 @@
-// frontend/src/services/superAdminUserService.js
 import apiClient from "./api"; // Sua instância configurada do Axios
 
 /**

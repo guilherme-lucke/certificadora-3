@@ -1,4 +1,3 @@
-// frontend/src/components/auth/ProtectedRoute.jsx
 import React from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext"; // Ajuste o caminho se necessário

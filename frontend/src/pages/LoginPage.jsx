@@ -8,11 +8,11 @@ const LoginPage = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); // Obtenha a localização
-  const { login } = useAuth(); // Use o hook
+  const location = useLocation();
+  const { login } = useAuth(); 
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Adiciona o scroll para o topo ao montar o componente
+    window.scrollTo(0, 0); 
   }, []);
 
   const handleChange = (e) => {

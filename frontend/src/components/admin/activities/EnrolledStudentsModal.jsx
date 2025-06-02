@@ -1,4 +1,3 @@
-// frontend/src/components/admin/activities/EnrolledStudentsModal.jsx
 import React from "react";
 
 const EnrolledStudentsModal = ({

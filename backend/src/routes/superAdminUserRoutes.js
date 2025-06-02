@@ -1,4 +1,3 @@
-// backend/src/routes/superAdminUserRoutes.js
 const express = require("express");
 const router = express.Router();
 const superAdminUserController = require("../controllers/superAdminUserController"); // Vamos criar/modificar

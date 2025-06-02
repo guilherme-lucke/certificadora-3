@@ -1,4 +1,3 @@
-// backend/src/controllers/activityAdminController.js
 const Activity = require("../models/Activity"); // Importar o Model Activity
 const mongoose = require("mongoose"); // Importar o mongoose para validação de ObjectId
 const Inscription = require("../models/Inscription"); // Importar o Model Inscription

@@ -1,4 +1,3 @@
-// backend/src/controllers/inscriptionController.js
 const Inscription = require("../models/Inscription"); // Importar o Model Inscription
 const Activity = require("../models/Activity"); // Importar o Model Activity
 const mongoose = require("mongoose");

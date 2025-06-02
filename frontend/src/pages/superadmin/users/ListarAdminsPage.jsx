@@ -1,4 +1,3 @@
-// frontend/src/pages/superadmin/users/ListarAdminsPage.jsx
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import superAdminUserService from "../../../services/superAdminUserService";

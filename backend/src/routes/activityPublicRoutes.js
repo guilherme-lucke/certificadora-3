@@ -1,4 +1,3 @@
-// backend/src/routes/activityPublicRoutes.js
 const express = require("express");
 const router = express.Router();
 // Decidir se usará o mesmo controller de admin ou um novo controller público

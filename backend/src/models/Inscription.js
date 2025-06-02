@@ -1,5 +1,3 @@
-// backend/src/models/Inscription.js
-
 const mongoose = require("mongoose");
 
 const InscriptionSchema = new mongoose.Schema(

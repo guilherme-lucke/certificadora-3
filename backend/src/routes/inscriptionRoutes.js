@@ -1,4 +1,3 @@
-// backend/src/routes/inscriptionRoutes.js
 const express = require("express");
 const router = express.Router();
 const inscriptionController = require("../controllers/inscriptionController"); // Vamos criar/modificar

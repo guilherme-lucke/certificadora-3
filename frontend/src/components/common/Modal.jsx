@@ -1,4 +1,3 @@
-// frontend/src/components/common/Modal.jsx
 import React from "react";
 
 const Modal = ({

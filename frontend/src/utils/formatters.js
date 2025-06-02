@@ -1,5 +1,3 @@
-// frontend/src/utils/formatters.js
-
 /**
  * Formata uma data para o formato brasileiro
  * @param {string} dateString - String da data a ser formatada

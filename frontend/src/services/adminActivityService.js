@@ -1,4 +1,3 @@
-// frontend/src/services/adminActivityService.js
 import apiClient from "./api"; // Sua instância configurada do Axios
 
 const getAllActivities = async (params = {}) => {

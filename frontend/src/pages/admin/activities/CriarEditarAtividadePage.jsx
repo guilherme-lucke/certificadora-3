@@ -1,4 +1,3 @@
-// frontend/src/pages/admin/activities/CriarEditarAtividadePage.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import adminActivityService from "../../../services/adminActivityService"; // Ajuste o caminho

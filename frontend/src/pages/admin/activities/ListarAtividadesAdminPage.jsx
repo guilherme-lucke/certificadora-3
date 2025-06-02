@@ -1,4 +1,3 @@
-// frontend/src/pages/admin/activities/ListarAtividadesAdminPage.jsx
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import adminActivityService from "../../../services/adminActivityService";
